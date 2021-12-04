@@ -42,5 +42,6 @@ public class Day1 {
         }
 
         System.out.println(counterTwo);
+        br.close();
     }
 }

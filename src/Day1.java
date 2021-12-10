@@ -16,7 +16,7 @@ public class Day1 {
     }
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("inputs/input_day_one.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("inputs/day1.txt"));
         ArrayList<Integer> ints = new ArrayList<Integer>();
         int counter = 0;
 

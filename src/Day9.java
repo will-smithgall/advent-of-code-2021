@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Day9 {
     public static void main(String[] args) throws IOException {
         ArrayList<String[]> heats = new ArrayList<String[]>();
-        BufferedReader br = new BufferedReader(new FileReader("inputs/day9.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("inputs/test.txt"));
         String line = br.readLine();
 
         while (line != null) {
@@ -31,25 +31,25 @@ public class Day9 {
                 try {
                     left = Integer.parseInt(heats.get(i)[j - 1]);
                 } catch (IndexOutOfBoundsException e) {
-                    left = 10;
+                    left = 9;
                 }
 
                 try {
                     right = Integer.parseInt(heats.get(i)[j + 1]);
                 } catch (IndexOutOfBoundsException e) {
-                    right = 10;
+                    right = 9;
                 }
 
                 try {
                     up = Integer.parseInt(heats.get(i - 1)[j]);
                 } catch (IndexOutOfBoundsException e) {
-                    up = 10;
+                    up = 9;
                 }
 
                 try {
                     down = Integer.parseInt(heats.get(i + 1)[j]);
                 } catch (IndexOutOfBoundsException e) {
-                    down = 10;
+                    down = 9;
                 }
 
                 //Corner or edge cases

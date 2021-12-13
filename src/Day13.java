@@ -62,7 +62,6 @@ public class Day13 {
             points = newPoints;
         }
 
-        System.out.println(points.get(4));
         System.out.println(points.size());
     }
 }

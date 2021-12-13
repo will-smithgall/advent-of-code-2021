@@ -6,16 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Day6 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("inputs/day6.txt"));
-        ArrayList<Integer> fish = new ArrayList<Integer>();
 
-        String[] line = br.readLine().split(",");
-
-        for (int i = 0; i < line.length; i++) {
-            fish.add(Integer.parseInt(line[i]));
-        }
-
+    public static int numFishPartOne(ArrayList<Integer> fish) {
         for (int i = 0; i < 80; i++) {
             ArrayList<Integer> newDay = new ArrayList<Integer>(fish);
             int count = 0;
@@ -35,6 +27,23 @@ public class Day6 {
             fish = newDay;
         }
 
-        System.out.println(fish.size());
+        return fish.size();
+    }
+
+    public static int getFishPartTwo(ArrayList<Integer> fish) {
+        return 0;
+    }
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("inputs/test.txt"));
+        ArrayList<Integer> fish = new ArrayList<Integer>();
+
+        String[] line = br.readLine().split(",");
+
+        for (int i = 0; i < line.length; i++) {
+            fish.add(Integer.parseInt(line[i]));
+        }
+
+        System.out.println(numFishPartOne(fish));
     }
 }
